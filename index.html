@@ -1,0 +1,936 @@
+<head>
+  <script src="https://unpkg.com/sunburst-chart@1.3.1/dist/sunburst-chart.min.js"></script>
+  <!--<script src="../../dist/sunburst-chart.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <style>body { margin: 0 }</style>
+</head>
+<body>
+<h2 style="text-align:center; font-family: 'Raleway', sans-serif;">Perfil do assassino e da vítima nos Estados Unidos</h2>
+  <div id="chart" style="width: 300px; height: 300px;"></div>
+
+  <script>
+    var data = {
+    "name": "assasinos e vitimas",
+    "color": "#f47824",
+    "size": 0,
+    "children": [
+        {
+            "name": "assasinos",
+            "color": "#2d0463",
+            "size": 0,
+            "children": [
+                {
+                    "name": "Sexo",
+                    "color": "#732e8b",
+                    "size": 0,
+                    "children": [
+                        {
+                            "name": "Feminino",
+                            "color": "#fa8072",
+                            "size": 971,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "1,20",
+                                            "color": "#68ff09",
+                                            "size": 131,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 1,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 55,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 1,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 74,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "21,40",
+                                            "color": "#50c506",
+                                            "size": 549,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 8,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 242,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 8,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 5,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 286,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "41,60",
+                                            "color": "#3c8d09",
+                                            "size": 243,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 12,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 86,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 1,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 3,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 141,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "61+",
+                                            "color": "#275e03",
+                                            "size": 41,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 8,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 33,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Masculino",
+                            "color": "#90b7c9",
+                            "size": 9726,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "1,20",
+                                            "color": "#68ff09",
+                                            "size": 1864,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 20,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 1153,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 14,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 19,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 658,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "21,40",
+                                            "color": "#50c506",
+                                            "size": 5137,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 75,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 2394,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 46,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 42,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 2580,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "41,60",
+                                            "color": "#3c8d09",
+                                            "size": 1716,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 40,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 510,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 13,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 17,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 1136,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "61+",
+                                            "color": "#275e03",
+                                            "size": 372,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 13,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 74,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 2,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 283,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Desconhecido",
+                            "color": "#d0cfc1",
+                            "size": 4424,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "0",
+                                            "color": "#68ff09",
+                                            "size": 4424,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 1,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 8,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 4,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 0,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "vitimas",
+            "color": "#e70124",
+            "size": 0,
+            "children": [
+                {
+                    "name": "Sexo",
+                    "color": "#732e8b",
+                    "size": 0,
+                    "children": [
+                        {
+                            "name": "Feminino",
+                            "color": "#fa8072",
+                            "size": 3308,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "1,20",
+                                            "color": "#68ff09",
+                                            "size": 557,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 13,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 241,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 5,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 7,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 291,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "21,40",
+                                            "color": "#50c506",
+                                            "size": 1300,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 32,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 494,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 9,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 11,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 754,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "41,60",
+                                            "color": "#3c8d09",
+                                            "size": 882,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 29,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 233,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 9,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 7,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 604,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "61+",
+                                            "color": "#275e03",
+                                            "size": 462,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 16,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 78,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 11,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 357,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Masculino",
+                            "color": "#90b7c9",
+                            "size": 11790,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "1,20",
+                                            "color": "#68ff09",
+                                            "size": 2374,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 24,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 1438,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 18,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 14,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 880,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "21,40",
+                                            "color": "#50c506",
+                                            "size": 6298,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 66,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 3771,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 47,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 61,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 2353,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "41,60",
+                                            "color": "#3c8d09",
+                                            "size": 2361,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 45,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 921,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 20,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 17,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 1358,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "61+",
+                                            "color": "#275e03",
+                                            "size": 645,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 15,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 172,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 4,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 17,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 437,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Desconhecido",
+                            "color": "#d0cfc1",
+                            "size": 23,
+                            "children": [
+                                {
+                                    "name": "Idade",
+                                    "color": "#3dd73a",
+                                    "size": 0,
+                                    "children": [
+                                        {
+                                            "name": "0",
+                                            "color": "#68ff09",
+                                            "size": 23,
+                                            "children": [
+                                                {
+                                                    "name": "Raca",
+                                                    "color": "#ead03a",
+                                                    "size": 0,
+                                                    "children": [
+                                                        {
+                                                            "name": "Asian/Pacific Islander",
+                                                            "color": "#bd3853",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Black",
+                                                            "color": "#34637b",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Native American/Alaska Native",
+                                                            "color": "#7b4e9a",
+                                                            "size": 1,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Unknown",
+                                                            "color": "#ffcc99",
+                                                            "size": 0,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "White",
+                                                            "color": "#e2e7f8",
+                                                            "size": 16,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+function labelTransform(d) {
+    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+    const y = (d.y0 + d.y1) / 2 * radius;
+    return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+}
+    Sunburst()
+      .data(data)
+      .size('size')
+      .color('color')
+      .tooltipContent((d, node) => `<i>${node.value}</i>`)
+      (document.getElementById('chart'));
+  </script>
+</body>
